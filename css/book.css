@@ -150,6 +150,7 @@ h1 {
   margin: 0;
   padding: 0;
   list-style: none;
+  counter-reset: plate;
   display: grid;
   gap: 0.55rem;
 }
@@ -161,10 +162,11 @@ h1 {
   align-items: baseline;
   border-top: 1px solid rgba(18, 36, 28, 0.12);
   padding-top: 0.55rem;
+  counter-increment: plate;
 }
 
 .contents li::before {
-  content: counter(list-item, upper-roman);
+  content: counter(plate, upper-roman);
   font-family: var(--display);
   font-size: 0.78rem;
   letter-spacing: 0.12em;
