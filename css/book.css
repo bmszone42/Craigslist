@@ -1,0 +1,297 @@
+:root {
+  --paper: #f3eee4;
+  --paper-deep: #e8e0d2;
+  --ink: #12241c;
+  --ink-soft: #3d4f46;
+  --pool: #5a9e98;
+  --pool-deep: #1f4f4c;
+  --wax: #9f2430;
+  --gold: #c4a574;
+  --shadow: rgba(18, 36, 28, 0.18);
+  --display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --text: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --measure: min(44rem, 92vw);
+  --plate: min(58rem, 92vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 700px at 12% -10%, rgba(90, 158, 152, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 110% 8%, rgba(196, 165, 116, 0.16), transparent 50%),
+    var(--paper);
+  font-family: var(--text);
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--pool-deep);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--wax);
+}
+
+::selection {
+  background: rgba(90, 158, 152, 0.35);
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 0.8rem;
+  background: var(--ink);
+  color: var(--paper);
+  z-index: 10;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+.title-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem, 8vw, 6.5rem) clamp(1.4rem, 6vw, 5rem) 4rem;
+  overflow: hidden;
+}
+
+.title-page__wash {
+  position: absolute;
+  inset: auto -8% 8% auto;
+  width: min(28rem, 70vw);
+  height: min(28rem, 70vw);
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(126, 196, 190, 0.38), rgba(90, 158, 152, 0.08) 62%, transparent 70%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.eyebrow,
+.plate__index,
+.filename,
+.colophon__note {
+  font-family: var(--display);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.eyebrow {
+  margin: 0 0 1.25rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(4.4rem, 14vw, 9.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  font-optical-sizing: auto;
+}
+
+.lede {
+  max-width: 34rem;
+  margin: 1.6rem 0 0;
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.credit {
+  margin-top: 2.4rem;
+}
+
+.credit p {
+  margin: 0.15rem 0;
+}
+
+.credit strong {
+  font-family: var(--display);
+  font-weight: 500;
+}
+
+.contents {
+  margin-top: 3.4rem;
+  max-width: 36rem;
+}
+
+.contents ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: plate;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.contents li {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.8rem;
+  align-items: baseline;
+  border-top: 1px solid rgba(18, 36, 28, 0.12);
+  padding-top: 0.55rem;
+  counter-increment: plate;
+}
+
+.contents li::before {
+  content: counter(plate, upper-roman);
+  font-family: var(--display);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+}
+
+.contents a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contents a:hover {
+  color: var(--pool-deep);
+  text-decoration: underline;
+}
+
+.turn {
+  display: inline-block;
+  margin-top: 2.8rem;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--pool-deep);
+}
+
+main {
+  padding: 2rem 0 5rem;
+}
+
+.plate {
+  width: var(--plate);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 7rem) 0;
+}
+
+.plate__index {
+  margin: 0 0 1.1rem;
+  color: var(--gold);
+}
+
+.plate figure {
+  margin: 0;
+}
+
+.plate img {
+  width: 100%;
+  background: var(--paper-deep);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 18px 50px var(--shadow);
+}
+
+figcaption {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 1.15rem;
+  max-width: 40rem;
+}
+
+.caption {
+  font-family: var(--display);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 480;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.filename {
+  letter-spacing: 0.14em;
+}
+
+.colophon {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 5rem 1.4rem 6rem;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.colophon__mark {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: 2.4rem;
+  color: var(--ink);
+}
+
+.colophon p {
+  margin: 0.7rem auto 0;
+  max-width: 34rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1.05rem;
+  }
+
+  .title-page {
+    min-height: auto;
+    padding-top: 4.5rem;
+  }
+
+  .contents li {
+    grid-template-columns: 1.6rem 1fr;
+  }
+
+  .plate {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .plate__index,
+  figcaption {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .plate img {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
