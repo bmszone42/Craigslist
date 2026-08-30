@@ -13,168 +13,499 @@
   <link rel="stylesheet" href="css/book.css">
 </head>
 <body>
-  <a class="skip" href="#plates">Skip to photographs</a>
+  <a class="skip" href="#contents">Skip to plates</a>
 
   <header class="title-page" id="cover">
     <div class="title-page__wash" aria-hidden="true"></div>
     <p class="eyebrow">A picture book, not classifieds</p>
     <h1>Craigslist</h1>
-    <p class="lede">Nine photographs from a lush tropical garden — a private photo pool of palms, cycads, bamboo, and ginger.</p>
+    <p class="lede">Nine photographs from a lush tropical garden &mdash; a private photo pool of palms, cycads, bamboo, and ginger.</p>
     <div class="credit">
       <p>Photographs by <strong>Craig Goldstone</strong></p>
-      <p>Sony digital camera · photographed on his property</p>
+      <p>Sony digital camera &middot; photographed on his property</p>
     </div>
-    <nav class="contents" aria-label="Plates">
-      <ol>
-        <li><a href="#plate-1">Rare Blue Cycad</a></li>
-        <li><a href="#plate-2"><em>Encephalartos</em> sp.</a></li>
-        <li><a href="#plate-3">Zombie Palm trunk</a></li>
-        <li><a href="#plate-4">Red Sealing Wax Palm</a></li>
-        <li><a href="#plate-5">Blue Bamboo</a></li>
-        <li><a href="#plate-6">Beehive Ginger</a></li>
-        <li><a href="#plate-7">Montgomery Palms &amp; Slender Weavers Bamboo</a></li>
-        <li><a href="#plate-8">Untitled</a></li>
-        <li><a href="#plate-9">Chamberonia Palm</a></li>
-      </ol>
-    </nav>
-    <a class="turn" href="#plates">Turn the page</a>
+    <a class="turn" href="#verso">Turn the page</a>
   </header>
+
+  <section class="verso" id="verso" aria-label="About this book">
+    <p class="eyebrow">Title-page verso</p>
+    <p class="verso__who">Craig Goldstone made these photographs on his property with an early Sony digital camera, a number of years ago.</p>
+    <p>This is a picture book of a Miami garden, not a flora of the wild. The plates keep Craig&rsquo;s captions. Where he did not name a species, this book does not invent one.</p>
+    <p class="verso__hint">Arrow keys turn the page.</p>
+    <nav class="pager">
+      <a href="#cover">Title</a>
+      <a href="#contents">Contents</a>
+    </nav>
+  </section>
+
+  <nav class="contents-page" id="contents" aria-label="List of plates">
+    <p class="eyebrow">Contents</p>
+    <h2>Nine plates</h2>
+    <ol class="thumbs">
+      <li>
+        <a href="#plate-1">
+          <img src="photos/rare-blue-cycad.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">I</span>
+          <span class="thumbs__title">Rare Blue Cycad</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-2">
+          <img src="photos/encephalartos-sp.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">II</span>
+          <span class="thumbs__title"><em>Encephalartos</em> sp.</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-3">
+          <img src="photos/zombie-palm-trunk.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">III</span>
+          <span class="thumbs__title">Zombie Palm trunk</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-4">
+          <img src="photos/red-sealing-wax-palm.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">IV</span>
+          <span class="thumbs__title">Red Sealing Wax Palm</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-5">
+          <img src="photos/blue-bamboo.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">V</span>
+          <span class="thumbs__title">Blue Bamboo</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-6">
+          <img src="photos/beehive-ginger.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">VI</span>
+          <span class="thumbs__title">Beehive Ginger</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-7">
+          <img src="photos/montgomery-palms-and-slender-weavers-bamboo.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">VII</span>
+          <span class="thumbs__title">Montgomery Palms &amp; Slender Weavers Bamboo</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-8">
+          <img src="photos/untitled.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">VIII</span>
+          <span class="thumbs__title">Untitled</span>
+        </a>
+      </li>
+      <li>
+        <a href="#plate-9">
+          <img src="photos/chamberonia-palm-emerging-red-frond.jpg" alt="" width="3648" height="2736" loading="lazy">
+          <span class="thumbs__index">IX</span>
+          <span class="thumbs__title">Chamberonia Palm</span>
+        </a>
+      </li>
+    </ol>
+  </nav>
 
   <main id="plates">
     <article class="plate" id="plate-1">
       <p class="plate__index">Plate I</p>
       <figure>
-        <img
-          src="photos/rare-blue-cycad.jpg"
-          alt="Rare Blue Cycad"
-          width="3648"
-          height="2736"
-          fetchpriority="high">
+        <img src="photos/rare-blue-cycad.jpg" alt="Rare Blue Cycad" width="3648" height="2736" fetchpriority="high">
         <figcaption>
-          <span class="caption">Rare Blue Cycad</span>
+          <h2 class="caption">Rare Blue Cycad</h2>
+          <p class="latin">No binomial given &middot; genus almost certainly <em>Encephalartos</em></p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Family</dt>
+            <dd>Zamiaceae</dd>
+          </div>
+          <div>
+            <dt>Native range</dt>
+            <dd>Africa <span class="quiet">(genus)</span></dd>
+          </div>
+          <div>
+            <dt>How to say it</dt>
+            <dd>en-sef-uh-LAR-tos</dd>
+          </div>
+          <div>
+            <dt>Etymology</dt>
+            <dd>Greek <em>enkephalos</em> + <em>artos</em>, &ldquo;bread in the head&rdquo;</dd>
+          </div>
+        </dl>
+        <p class="chip">Africa</p>
+        <div class="notes">
+          <p>Craig did not name a species. The plant belongs to Zamiaceae, genus almost certainly <em>Encephalartos</em> &mdash; African cycads whose leaflets are often glaucous, the &ldquo;blue&rdquo; of several species.</p>
+          <p>That wax reads stronger in dry air and often washes greener in humid South Florida. The genus name is Greek <em>enkephalos</em> + <em>artos</em>, &ldquo;bread in the head,&rdquo; for pith once baked as bread; the whole genus is CITES Appendix&nbsp;I. This is a garden specimen, not a wild identification.</p>
+        </div>
+        <nav class="pager">
+          <a href="#contents">Contents</a>
+          <a href="#plate-2">Plate II</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-2">
       <p class="plate__index">Plate II</p>
       <figure>
-        <img
-          src="photos/encephalartos-sp.jpg"
-          alt="Encephalartos sp."
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/encephalartos-sp.jpg" alt="Encephalartos sp." width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption"><em>Encephalartos</em> sp.</span>
+          <h2 class="caption"><em>Encephalartos</em> sp.</h2>
+          <p class="latin">Identified only to genus</p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Family</dt>
+            <dd>Zamiaceae</dd>
+          </div>
+          <div>
+            <dt>Native range</dt>
+            <dd>Africa only</dd>
+          </div>
+          <div>
+            <dt>How to say it</dt>
+            <dd>en-sef-uh-LAR-tos</dd>
+          </div>
+          <div>
+            <dt>Etymology</dt>
+            <dd>&ldquo;Bread in the head&rdquo; &mdash; starchy pith</dd>
+          </div>
+        </dl>
+        <p class="chip">Nigeria / Sudan &rarr; the Cape</p>
+        <div class="notes">
+          <p>The same African genus: <em>Encephalartos</em> lives only on that continent, from Nigeria and Sudan through the Cape, in some 65&ndash;68 species.</p>
+          <p>They are living gymnosperms &mdash; cone-bearing, not palms. Every species is endangered or worse in the wild from collecting, and the genus is CITES Appendix&nbsp;I. The photograph is labeled only to genus; this book does not invent a species for it.</p>
+        </div>
+        <nav class="pager">
+          <a href="#plate-1">Plate I</a>
+          <a href="#contents">Contents</a>
+          <a href="#plate-3">Plate III</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-3">
       <p class="plate__index">Plate III</p>
       <figure>
-        <img
-          src="photos/zombie-palm-trunk.jpg"
-          alt="Zombie Palm trunk (Zombia antillarum)"
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/zombie-palm-trunk.jpg" alt="Zombie Palm trunk (Zombia antillarum)" width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption">Zombie Palm trunk (<em>Zombia antillarum</em>)</span>
+          <h2 class="caption">Zombie Palm trunk</h2>
+          <p class="latin"><em>Zombia antillarum</em></p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Family</dt>
+            <dd>Arecaceae</dd>
+          </div>
+          <div>
+            <dt>Native range</dt>
+            <dd>Hispaniola</dd>
+          </div>
+          <div>
+            <dt>How to say it</dt>
+            <dd>ZOM-bee-uh an-tih-LAR-um</dd>
+          </div>
+          <div>
+            <dt>Etymology</dt>
+            <dd>From the Haitian place-name that became the genus</dd>
+          </div>
+        </dl>
+        <p class="chip">Haiti + Dominican Republic</p>
+        <div class="notes">
+          <p><em>Zombia</em> is a genus of one, endemic to Hispaniola on dry hills, slopes, and ridges, often on serpentine soils. The armored trunk is persistent, spiny leaf sheaths on a clustered fan palm.</p>
+          <p>It is a popular ornamental, drought- and salt-tolerant. Status depends on the list: IUCN called it not threatened in 2006; a later West Indian palm review treated it as Vulnerable; the Dominican Republic&rsquo;s 2016 vascular-plant red list treated it as Critically Endangered in-country, amid habitat loss in Haiti.</p>
+        </div>
+        <nav class="pager">
+          <a href="#plate-2">Plate II</a>
+          <a href="#contents">Contents</a>
+          <a href="#plate-4">Plate IV</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-4">
       <p class="plate__index">Plate IV</p>
       <figure>
-        <img
-          src="photos/red-sealing-wax-palm.jpg"
-          alt="Red Sealing Wax Palm (Cyrtostachys renda)"
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/red-sealing-wax-palm.jpg" alt="Red Sealing Wax Palm (Cyrtostachys renda)" width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption">Red Sealing Wax Palm (<em>Cyrtostachys renda</em>)</span>
+          <h2 class="caption">Red Sealing Wax Palm</h2>
+          <p class="latin"><em>Cyrtostachys renda</em> Blume</p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Family</dt>
+            <dd>Arecaceae</dd>
+          </div>
+          <div>
+            <dt>Native range</dt>
+            <dd>S. Thailand, Peninsular Malaysia, Singapore, Sumatra, Borneo</dd>
+          </div>
+          <div>
+            <dt>How to say it</dt>
+            <dd>sir-TOSS-tuh-kiss REN-duh</dd>
+          </div>
+          <div>
+            <dt>Etymology</dt>
+            <dd>Named for sealing wax &mdash; the scarlet crownshaft, not a wax crop</dd>
+          </div>
+        </dl>
+        <p class="chip">West of Wallace&rsquo;s Line</p>
+        <div class="notes">
+          <p>Also called lipstick palm and pinang rajah, this is the only <em>Cyrtostachys</em> west of Wallace&rsquo;s Line, at home in lowland peat swamp, riverbank, and tidal freshwater.</p>
+          <p>It clusters, and it is slow. Singapore Botanic Gardens uses it in the logo; NParks lists the native Singapore population as Critically Endangered. This book does not invent a global IUCN rank.</p>
+        </div>
+        <nav class="pager">
+          <a href="#plate-3">Plate III</a>
+          <a href="#contents">Contents</a>
+          <a href="#plate-5">Plate V</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-5">
       <p class="plate__index">Plate V</p>
       <figure>
-        <img
-          src="photos/blue-bamboo.jpg"
-          alt="Blue Bamboo (Bambusa Chungii)"
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/blue-bamboo.jpg" alt="Blue Bamboo (Bambusa Chungii)" width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption">Blue Bamboo (<em>Bambusa Chungii</em>)</span>
+          <h2 class="caption">Blue Bamboo</h2>
+          <p class="latin"><em>Bambusa chungii</em> McClure <span class="quiet">(Craig wrote <em>Bambusa Chungii</em>)</span></p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Family</dt>
+            <dd>Poaceae</dd>
+          </div>
+          <div>
+            <dt>Native range</dt>
+            <dd>Southern China and Vietnam</dd>
+          </div>
+          <div>
+            <dt>How to say it</dt>
+            <dd>bam-BEW-suh CHUNG-ee-eye</dd>
+          </div>
+          <div>
+            <dt>Also called</dt>
+            <dd>Tropical, white, or emperor&rsquo;s blue bamboo</dd>
+          </div>
+        </dl>
+        <p class="chip">Southern China &middot; Vietnam</p>
+        <div class="notes">
+          <p>A clumping (non-running) bamboo whose young culms wear a persistent white wax that reads blue. Culms commonly reach 8&ndash;12&nbsp;m.</p>
+          <p>In subtropical gardens &mdash; Florida, Hawaii, California &mdash; it is grown as an ornamental screen.</p>
+        </div>
+        <nav class="pager">
+          <a href="#plate-4">Plate IV</a>
+          <a href="#contents">Contents</a>
+          <a href="#plate-6">Plate VI</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-6">
       <p class="plate__index">Plate VI</p>
       <figure>
-        <img
-          src="photos/beehive-ginger.jpg"
-          alt="Beehive Ginger (Zingiber spectabile)"
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/beehive-ginger.jpg" alt="Beehive Ginger (Zingiber spectabile)" width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption">Beehive Ginger (<em>Zingiber spectabile</em>)</span>
+          <h2 class="caption">Beehive Ginger</h2>
+          <p class="latin"><em>Zingiber spectabile</em> Griff.</p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Family</dt>
+            <dd>Zingiberaceae</dd>
+          </div>
+          <div>
+            <dt>Native range</dt>
+            <dd>Thailand to Peninsular Malaysia</dd>
+          </div>
+          <div>
+            <dt>How to say it</dt>
+            <dd>ZIN-jih-ber spek-TAB-ih-lay</dd>
+          </div>
+          <div>
+            <dt>Etymology</dt>
+            <dd>The stacked bracts look like a beehive</dd>
+          </div>
+        </dl>
+        <p class="chip">Thailand &rarr; Peninsular Malaysia</p>
+        <div class="notes">
+          <p>Native from Thailand to Peninsular Malaysia (Kew, Plants of the World Online). The inflorescence is a stack of incurved bracts; the true flowers poke from the pouches.</p>
+          <p>It is related to culinary ginger and grown here as an ornamental. IUCN lists it as Data Deficient &mdash; a data-poor rank, not a finding that the plant is safe.</p>
+        </div>
+        <nav class="pager">
+          <a href="#plate-5">Plate V</a>
+          <a href="#contents">Contents</a>
+          <a href="#plate-7">Plate VII</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-7">
       <p class="plate__index">Plate VII</p>
       <figure>
-        <img
-          src="photos/montgomery-palms-and-slender-weavers-bamboo.jpg"
-          alt="Montgomery Palms (Veitchia arecina) on the left and Slender Weavers Bamboo (Bambusa textilis) on the right"
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/montgomery-palms-and-slender-weavers-bamboo.jpg" alt="Montgomery Palms (Veitchia arecina) on the left and Slender Weavers Bamboo (Bambusa textilis) on the right" width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption">Montgomery Palms (<em>Veitchia arecina</em>) on the left and Slender Weavers Bamboo (<em>Bambusa textilis</em>) on the right</span>
+          <h2 class="caption">Montgomery Palms and Slender Weavers Bamboo</h2>
+          <p class="latin">A pair of <em>Veitchia arecina</em> on the left; <em>Bambusa textilis</em> on the right</p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <p class="folio__lead">Two species in one photograph, as Craig captioned them.</p>
+        <div class="cards">
+          <section class="card-block" aria-labelledby="palm-card">
+            <h3 id="palm-card">Montgomery Palm</h3>
+            <p class="latin"><em>Veitchia arecina</em> Becc.</p>
+            <dl class="card">
+              <div>
+                <dt>Family</dt>
+                <dd>Arecaceae</dd>
+              </div>
+              <div>
+                <dt>Native range</dt>
+                <dd>Vanuatu <span class="quiet">(Efate in the conservation note)</span></dd>
+              </div>
+              <div>
+                <dt>How to say it</dt>
+                <dd>VEET-chee-uh ah-reh-SEE-nuh</dd>
+              </div>
+              <div>
+                <dt>Etymology</dt>
+                <dd>Named for Col. R.&nbsp;H. Montgomery, a friend of David Fairchild</dd>
+              </div>
+            </dl>
+            <p class="chip">Vanuatu</p>
+            <div class="notes">
+              <p>Also treated under the synonym <em>Veitchia montgomeryana</em>. A tall, slender, solitary pinnate palm with a green crownshaft and red fruit; it does well in tropical Florida.</p>
+              <p>IUCN lists it as Endangered (as <em>V. montgomeryana</em>), citing habitat loss.</p>
+            </div>
+          </section>
+          <section class="card-block" aria-labelledby="bamboo-card">
+            <h3 id="bamboo-card">Slender Weavers Bamboo</h3>
+            <p class="latin"><em>Bambusa textilis</em> McClure</p>
+            <dl class="card">
+              <div>
+                <dt>Family</dt>
+                <dd>Poaceae</dd>
+              </div>
+              <div>
+                <dt>Native range</dt>
+                <dd>Southern China</dd>
+              </div>
+              <div>
+                <dt>How to say it</dt>
+                <dd>bam-BEW-suh TEKS-tih-liss</dd>
+              </div>
+              <div>
+                <dt>Etymology</dt>
+                <dd>Weaver&rsquo;s bamboo &mdash; culms used for basketry</dd>
+              </div>
+            </dl>
+            <p class="chip">Anhui &middot; Guangdong &middot; Fujian &middot; Guangxi</p>
+            <div class="notes">
+              <p>A clumping bamboo with straight, thin-walled culms. Craig&rsquo;s caption puts the Montgomery pair on the left and the weavers on the right.</p>
+            </div>
+          </section>
+        </div>
+        <nav class="pager">
+          <a href="#plate-6">Plate VI</a>
+          <a href="#contents">Contents</a>
+          <a href="#plate-8">Plate VIII</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-8">
       <p class="plate__index">Plate VIII</p>
       <figure>
-        <img
-          src="photos/untitled.jpg"
-          alt="Untitled"
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/untitled.jpg" alt="Untitled" width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption">Untitled</span>
-          <span class="filename">Sony roll &middot; DSC00027</span>
+          <h2 class="caption">Untitled</h2>
+          <p class="latin">No binomial &middot; Sony roll DSC00027</p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Caption</dt>
+            <dd>Untitled</dd>
+          </div>
+          <div>
+            <dt>Camera roll</dt>
+            <dd>DSC00027</dd>
+          </div>
+          <div>
+            <dt>In the frame</dt>
+            <dd>Armored, densely spined trunk; fan foliage behind</dd>
+          </div>
+          <div>
+            <dt>Name</dt>
+            <dd>None given &mdash; and none invented here</dd>
+          </div>
+        </dl>
+        <div class="notes">
+          <p>The roll is unlabeled. The picture is a close-up of a densely spined, armored trunk with fan foliage behind &mdash; the same garden language as the Zombie Palm plate, without a name attached. Field notes sometimes stop at the photograph; the spines are in the frame because that is what the camera was pointed at.</p>
+        </div>
+        <nav class="pager">
+          <a href="#plate-7">Plate VII</a>
+          <a href="#contents">Contents</a>
+          <a href="#plate-9">Plate IX</a>
+        </nav>
+      </div>
     </article>
 
     <article class="plate" id="plate-9">
       <p class="plate__index">Plate IX</p>
       <figure>
-        <img
-          src="photos/chamberonia-palm-emerging-red-frond.jpg"
-          alt="Chamberonia Palm (Chambeyronia macrocarpa) emerging red frond"
-          width="3648"
-          height="2736"
-          loading="lazy">
+        <img src="photos/chamberonia-palm-emerging-red-frond.jpg" alt="Chamberonia Palm (Chambeyronia macrocarpa) emerging red frond" width="3648" height="2736" loading="lazy">
         <figcaption>
-          <span class="caption">Chamberonia Palm (<em>Chambeyronia macrocarpa</em>) emerging red frond</span>
+          <h2 class="caption">Chamberonia Palm, emerging red frond</h2>
+          <p class="latin">Craig&rsquo;s spelling. Accepted name: <em>Chambeyronia macrocarpa</em></p>
         </figcaption>
       </figure>
+      <div class="folio">
+        <dl class="card">
+          <div>
+            <dt>Family</dt>
+            <dd>Arecaceae</dd>
+          </div>
+          <div>
+            <dt>Native range</dt>
+            <dd>New Caledonia</dd>
+          </div>
+          <div>
+            <dt>How to say it</dt>
+            <dd>sham-bay-ROH-nee-uh mak-ro-KAR-puh</dd>
+          </div>
+          <div>
+            <dt>Also called</dt>
+            <dd>Red leaf palm, flamethrower palm</dd>
+          </div>
+        </dl>
+        <p class="chip">New Caledonia &middot; wet forest below ~800&nbsp;m</p>
+        <div class="notes">
+          <p>A solitary pinnate palm, endemic to the wet forests of New Caledonia below about 800&nbsp;m.</p>
+          <p>What this plate shows is the new frond: it emerges red or burgundy, then greens over about ten to fourteen days.</p>
+        </div>
+        <nav class="pager">
+          <a href="#plate-8">Plate VIII</a>
+          <a href="#contents">Contents</a>
+          <a href="#colophon">Colophon</a>
+        </nav>
+      </div>
     </article>
   </main>
 
@@ -182,7 +513,18 @@
     <p class="colophon__mark">Craigslist</p>
     <p>A garden picture book of nine original Sony JPEGs by Craig Goldstone, made on his property with a Sony digital camera. The photographs are unaltered originals.</p>
     <p class="colophon__note">This is a photo book. It is not a classifieds site.</p>
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li>Kew, Plants of the World Online (POWO) &mdash; ranges and accepted names, including <em>Zingiber spectabile</em>.</li>
+      <li>Wikipedia, Palmpedia, and the National Tropical Botanical Garden (NTBG) &mdash; garden and palm notes used only where they match the facts on these plates.</li>
+      <li>Vanuatu conservation note &mdash; <em>Veitchia arecina</em> on Efate; Endangered listing as <em>V. montgomeryana</em>.</li>
+      <li>IUCN and related lists as cited on the plates: 2006 IUCN assessment and later West Indian palm review for <em>Zombia antillarum</em>; Dominican Republic 2016 vascular-plant red list; NParks (Singapore) for native <em>Cyrtostachys renda</em>; IUCN Data Deficient for <em>Zingiber spectabile</em>; IUCN Endangered for Montgomery palm as <em>V. montgomeryana</em>.</li>
+      <li>CITES Appendix&nbsp;I for the genus <em>Encephalartos</em>.</li>
+    </ul>
+    <p>No species, binomial, or global rank was added beyond Craig&rsquo;s captions and the notes above.</p>
     <p><a href="#cover">Back to the title page</a></p>
   </footer>
+
+  <script src="js/book.js"></script>
 </body>
 </html>

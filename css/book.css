@@ -7,10 +7,11 @@
   --pool-deep: #1f4f4c;
   --wax: #9f2430;
   --gold: #c4a574;
+  --rule: rgba(18, 36, 28, 0.14);
   --shadow: rgba(18, 36, 28, 0.18);
   --display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   --text: "Source Serif 4", "Iowan Old Style", Georgia, serif;
-  --measure: min(44rem, 92vw);
+  --measure: min(42rem, 92vw);
   --plate: min(58rem, 92vw);
 }
 
@@ -27,10 +28,24 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background:
-    radial-gradient(1200px 700px at 12% -10%, rgba(90, 158, 152, 0.18), transparent 55%),
-    radial-gradient(900px 600px at 110% 8%, rgba(196, 165, 116, 0.16), transparent 50%),
-    var(--paper);
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(18, 36, 28, 0.012) 3px,
+      rgba(18, 36, 28, 0.012) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(18, 36, 28, 0.01) 3px,
+      rgba(18, 36, 28, 0.01) 4px
+    ),
+    radial-gradient(1200px 700px at 12% -10%, rgba(90, 158, 152, 0.16), transparent 55%),
+    radial-gradient(900px 600px at 110% 8%, rgba(196, 165, 116, 0.14), transparent 50%);
   font-family: var(--text);
   font-optical-sizing: auto;
   font-size: 1.125rem;
@@ -71,6 +86,19 @@ a:hover {
   top: 1rem;
 }
 
+.eyebrow,
+.plate__index,
+.thumbs__index,
+.colophon__note,
+.verso__hint,
+dt {
+  font-family: var(--display);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 .title-page {
   position: relative;
   min-height: 100vh;
@@ -92,17 +120,6 @@ a:hover {
   pointer-events: none;
 }
 
-.eyebrow,
-.plate__index,
-.filename,
-.colophon__note {
-  font-family: var(--display);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-
 .eyebrow {
   margin: 0 0 1.25rem;
 }
@@ -114,10 +131,10 @@ h1 {
   font-size: clamp(4.4rem, 14vw, 9.5rem);
   line-height: 0.86;
   letter-spacing: -0.035em;
-  font-optical-sizing: auto;
 }
 
-.lede {
+.lede,
+.verso__who {
   max-width: 34rem;
   margin: 1.6rem 0 0;
   font-family: var(--display);
@@ -141,48 +158,6 @@ h1 {
   font-weight: 500;
 }
 
-.contents {
-  margin-top: 3.4rem;
-  max-width: 36rem;
-}
-
-.contents ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: plate;
-  display: grid;
-  gap: 0.55rem;
-}
-
-.contents li {
-  display: grid;
-  grid-template-columns: 2.2rem 1fr;
-  gap: 0.8rem;
-  align-items: baseline;
-  border-top: 1px solid rgba(18, 36, 28, 0.12);
-  padding-top: 0.55rem;
-  counter-increment: plate;
-}
-
-.contents li::before {
-  content: counter(plate, upper-roman);
-  font-family: var(--display);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  color: var(--gold);
-}
-
-.contents a {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.contents a:hover {
-  color: var(--pool-deep);
-  text-decoration: underline;
-}
-
 .turn {
   display: inline-block;
   margin-top: 2.8rem;
@@ -192,8 +167,80 @@ h1 {
   color: var(--pool-deep);
 }
 
+.verso,
+.contents-page,
+.colophon {
+  width: var(--plate);
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: clamp(4rem, 10vw, 7rem) 1.4rem;
+}
+
+.verso p,
+.colophon > p {
+  max-width: 36rem;
+}
+
+.verso__who {
+  margin-top: 0.4rem;
+  color: var(--ink);
+}
+
+.verso__hint {
+  margin-top: 2rem;
+}
+
+.contents-page h2,
+.colophon h2,
+.card-block h3 {
+  margin: 0 0 1.4rem;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+
+.thumbs {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem 1.2rem;
+}
+
+.thumbs a {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.thumbs img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--paper-deep);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.thumbs__index {
+  color: var(--gold);
+}
+
+.thumbs__title {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.thumbs a:hover .thumbs__title {
+  color: var(--pool-deep);
+}
+
 main {
-  padding: 2rem 0 5rem;
+  padding: 1rem 0 4rem;
 }
 
 .plate {
@@ -211,7 +258,7 @@ main {
   margin: 0;
 }
 
-.plate img {
+.plate > figure img {
   width: 100%;
   background: var(--paper-deep);
   box-shadow:
@@ -222,27 +269,119 @@ main {
 figcaption {
   display: grid;
   gap: 0.35rem;
-  margin-top: 1.15rem;
-  max-width: 40rem;
+  margin-top: 1.2rem;
+  max-width: 42rem;
 }
 
 .caption {
+  margin: 0;
   font-family: var(--display);
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
   font-weight: 480;
   font-style: italic;
+  line-height: 1.3;
+}
+
+.latin {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.quiet {
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.folio {
+  max-width: var(--measure);
+  margin-top: 2.2rem;
+}
+
+.folio__lead {
+  margin: 0 0 1.4rem;
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.card {
+  margin: 0;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem 1.6rem;
+}
+
+.card div {
+  min-width: 0;
+}
+
+dt {
+  margin: 0 0 0.3rem;
+}
+
+dd {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.02rem;
   line-height: 1.4;
 }
 
-.filename {
+.chip {
+  display: inline-block;
+  margin: 1.1rem 0 0;
+  padding: 0.28rem 0.7rem;
+  border: 1px solid rgba(31, 79, 76, 0.28);
+  border-radius: 999px;
+  font-family: var(--display);
+  font-size: 0.68rem;
   letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pool-deep);
+}
+
+.notes {
+  margin-top: 1.4rem;
+}
+
+.notes p {
+  margin: 0 0 0.9rem;
+}
+
+.notes p:last-child {
+  margin-bottom: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2.2rem;
+}
+
+.card-block h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.45rem;
+}
+
+.card-block .latin {
+  margin-bottom: 0.9rem;
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.4rem;
+  margin-top: 2.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--display);
+  font-style: italic;
 }
 
 .colophon {
-  max-width: var(--measure);
-  margin: 0 auto;
-  padding: 5rem 1.4rem 6rem;
-  text-align: center;
+  text-align: left;
   color: var(--ink-soft);
 }
 
@@ -254,9 +393,27 @@ figcaption {
   color: var(--ink);
 }
 
-.colophon p {
-  margin: 0.7rem auto 0;
-  max-width: 34rem;
+.colophon h2 {
+  margin-top: 2.4rem;
+  font-size: 1.4rem;
+}
+
+.sources {
+  margin: 0;
+  padding-left: 1.2rem;
+  max-width: 40rem;
+}
+
+.sources li {
+  margin: 0.55rem 0;
+}
+
+@media (max-width: 860px) {
+  .thumbs,
+  .cards,
+  .card {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -269,23 +426,33 @@ figcaption {
     padding-top: 4.5rem;
   }
 
-  .contents li {
-    grid-template-columns: 1.6rem 1fr;
+  .thumbs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .verso,
+  .contents-page,
+  .colophon,
+  .plate {
+    width: 100%;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
   }
 
   .plate {
-    width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 
   .plate__index,
-  figcaption {
+  figcaption,
+  .folio {
     padding-left: 1.1rem;
     padding-right: 1.1rem;
   }
 
-  .plate img {
+  .plate > figure img,
+  .thumbs img {
     box-shadow: none;
   }
 }
@@ -293,5 +460,63 @@ figcaption {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+@media print {
+  :root {
+    --paper: #fff;
+    --shadow: transparent;
+  }
+
+  body {
+    background: #fff;
+    font-size: 11pt;
+    color: #111;
+  }
+
+  .skip,
+  .turn,
+  .verso__hint,
+  .pager {
+    display: none;
+  }
+
+  .title-page,
+  .verso,
+  .contents-page,
+  .plate,
+  .colophon {
+    min-height: 0;
+    page-break-after: always;
+    break-after: page;
+    padding: 0.6in 0.5in;
+    width: auto;
+    max-width: none;
+  }
+
+  .colophon {
+    page-break-after: auto;
+  }
+
+  .title-page__wash,
+  .thumbs img {
+    box-shadow: none;
+  }
+
+  .plate > figure img {
+    box-shadow: none;
+    max-height: 5.2in;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .thumbs {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
