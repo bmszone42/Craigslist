@@ -31,6 +31,7 @@
 <body>
   <a class="skip" href="#contents">Skip to plates</a>
   <p class="guest-bar">
+    <button type="button" class="print-booklet">Print booklet</button>
     <button type="button" id="guest-toggle" aria-pressed="false">Guest</button>
   </p>
 
@@ -43,6 +44,10 @@
       <p>Photographs by <strong>Craig</strong></p>
       <p>Sony digital camera &middot; photographed on his property</p>
     </div>
+    <p class="booklet-links">
+      <button type="button" class="print-booklet">Print booklet</button>
+      <a href="craigslist-booklet.pdf">Download PDF</a>
+    </p>
     <a class="turn" href="#verso">Turn the page</a>
   </header>
 
@@ -54,12 +59,14 @@
     <nav class="pager">
       <a href="#cover">Title</a>
       <a href="#contents">Contents</a>
+      <a href="#map">Map</a>
     </nav>
   </section>
 
   <nav class="contents-page" id="contents" aria-label="List of plates">
     <p class="eyebrow">Contents</p>
     <h2>Nine plates</h2>
+    <p class="contents-map-link"><a href="#map">A one-page map of the plants he photographed</a> &middot; Untitled has no pin</p>
     <ol class="thumbs">
       <li>
         <a href="#rare-blue-cycad">
@@ -614,10 +621,104 @@
         <nav class="pager">
           <a href="#untitled">Plate VIII</a>
           <a href="#contents">Contents</a>
-          <a href="#wanted">Wanted</a>
+          <a href="#map">Map</a>
         </nav>
       </div>
     </article>
+
+    <section class="map-page" id="map" aria-label="Map of photographed plants">
+      <p class="eyebrow">A garden atlas</p>
+      <h2>Where they come from</h2>
+      <p class="lede">Native ranges of the plants in these photographs &mdash; not pins on Craig&rsquo;s property, and not a fake GPS. Untitled has no caption, so it has no pin. The Wanted shortlist is not on this map.</p>
+      <figure class="world-map">
+        <svg viewBox="0 0 1000 480" role="img" aria-labelledby="map-title map-desc">
+          <title id="map-title">World map of native ranges for the photographed plants</title>
+          <desc id="map-desc">Schematic letterpress world map. Pins mark Africa for the Encephalartos plates, Hispaniola, the Malay peat-swamp cluster, southern China, Vanuatu, and New Caledonia. Untitled is omitted.</desc>
+          <rect class="map-ocean" width="1000" height="480"/>
+          <g class="map-graticule" aria-hidden="true">
+            <path d="M0 120 H1000 M0 240 H1000 M0 360 H1000"/>
+            <path d="M167 0 V480 M333 0 V480 M500 0 V480 M667 0 V480 M833 0 V480"/>
+          </g>
+          <g class="map-land">
+            <path d="M78 78 C145 52 230 58 268 88 C292 112 286 152 256 178 C228 208 196 228 172 246 C148 232 124 196 104 162 C86 128 68 100 78 78 Z"/>
+            <path d="M172 246 C198 258 214 278 202 298 L176 292 C168 268 162 250 172 246 Z"/>
+            <path d="M228 300 C262 292 284 322 290 362 C296 412 274 448 248 462 C226 450 208 410 204 368 C200 328 210 308 228 300 Z"/>
+            <path d="M318 48 C352 40 378 48 384 68 C372 88 348 94 324 86 C310 72 306 56 318 48 Z"/>
+            <path d="M248 196 L266 193 270 204 252 207 Z"/>
+            <path d="M478 92 C522 80 556 96 560 122 C546 144 514 150 490 138 C474 122 468 102 478 92 Z"/>
+            <path d="M488 158 C542 150 586 178 596 228 C608 292 584 354 548 392 C512 414 478 380 474 328 C468 268 474 198 488 158 Z"/>
+            <path d="M598 348 L616 342 620 378 600 384 Z"/>
+            <path d="M558 72 C652 48 790 58 868 92 C912 114 932 154 888 176 C844 164 778 180 716 188 C656 178 598 162 568 140 C552 118 542 90 558 72 Z"/>
+            <path d="M716 188 C740 204 752 234 736 256 L708 232 C702 208 708 192 716 188 Z"/>
+            <path d="M778 198 C816 192 848 208 858 230 C836 248 802 244 784 220 Z"/>
+            <path d="M818 318 C882 306 934 328 944 360 C922 394 858 404 826 382 C804 360 800 334 818 318 Z"/>
+            <path d="M930 300 L942 298 946 308 934 310 Z"/>
+            <path d="M952 312 L962 310 966 318 954 320 Z"/>
+          </g>
+          <g class="map-wash" aria-hidden="true">
+            <ellipse cx="532" cy="268" rx="62" ry="88"/>
+          </g>
+          <g class="map-pins">
+            <a href="#rare-blue-cycad">
+              <g class="pin" transform="translate(532 268)">
+                <circle r="9"/>
+                <text y="4">I–II</text>
+              </g>
+            </a>
+            <a href="#zombie-palm">
+              <g class="pin" transform="translate(258 200)">
+                <circle r="9"/>
+                <text y="4">III</text>
+              </g>
+            </a>
+            <a href="#red-sealing-wax-palm">
+              <g class="pin" transform="translate(818 228)">
+                <circle r="9"/>
+                <text y="4">IV</text>
+              </g>
+            </a>
+            <a href="#beehive-ginger">
+              <g class="pin pin--offset" transform="translate(798 248)">
+                <circle r="8"/>
+                <text y="3">VI</text>
+              </g>
+            </a>
+            <a href="#blue-bamboo">
+              <g class="pin" transform="translate(828 168)">
+                <circle r="9"/>
+                <text y="4">V</text>
+              </g>
+            </a>
+            <a href="#montgomery-palms">
+              <g class="pin" transform="translate(936 304)">
+                <circle r="9"/>
+                <text y="4">VII</text>
+              </g>
+            </a>
+            <a href="#chamberonia-palm">
+              <g class="pin" transform="translate(958 322)">
+                <circle r="9"/>
+                <text y="4">IX</text>
+              </g>
+            </a>
+          </g>
+        </svg>
+        <figcaption>A schematic atlas, not a survey. Africa is the <em>Encephalartos</em> genus range. The Malay pins sit together because plate IV and plate VI already share that coast. Plate VII is split: weavers bamboo with China, Montgomery palms on Vanuatu.</figcaption>
+      </figure>
+      <ol class="map-legend">
+        <li><a href="#rare-blue-cycad"><span>I–II</span> Africa</a> &mdash; Rare Blue Cycad and <em>Encephalartos</em> sp., genus range</li>
+        <li><a href="#zombie-palm"><span>III</span> Hispaniola</a> &mdash; Zombie Palm, <em>Zombia antillarum</em></li>
+        <li><a href="#red-sealing-wax-palm"><span>IV + VI</span> Malay peat swamp</a> &mdash; Red Sealing Wax Palm and Beehive Ginger (S. Thailand / Peninsular Malaysia / Sumatra / Borneo)</li>
+        <li><a href="#blue-bamboo"><span>V</span> China</a> &mdash; Blue Bamboo, and the weavers bamboo on plate VII</li>
+        <li><a href="#montgomery-palms"><span>VII</span> Vanuatu</a> &mdash; Montgomery palms, <em>Veitchia arecina</em></li>
+        <li><a href="#chamberonia-palm"><span>IX</span> New Caledonia</a> &mdash; Craig&rsquo;s Chamberonia, <em>Chambeyronia macrocarpa</em></li>
+      </ol>
+      <nav class="pager">
+        <a href="#chamberonia-palm">Plate IX</a>
+        <a href="#contents">Contents</a>
+        <a href="#wanted">Wanted</a>
+      </nav>
+    </section>
 
     <section class="wanted-open" id="wanted" aria-label="Wanted">
       <p class="eyebrow">A shortlist, not a caption</p>
@@ -626,7 +727,7 @@
       <p>Nine awaiting-photograph plates. Each one belongs beside a photograph already in this book. The pictures here are placeholders from Wikimedia Commons &mdash; not Craig&rsquo;s camera. The nine Sony JPEGs remain the only plant photographs he made.</p>
       <p class="wanted-open__source">One place to look: South Florida Palm Society Show and Sale at Fairchild Tropical Botanic Garden, Nov 28&ndash;29, 2026.</p>
       <nav class="pager">
-        <a href="#chamberonia-palm">Plate IX</a>
+        <a href="#map">Map</a>
         <a href="#contents">Contents</a>
         <a href="#wanted-encephalartos-ferox">Wanted I</a>
       </nav>
@@ -1041,6 +1142,10 @@
   <footer class="colophon" id="colophon">
     <p class="colophon__mark">Craigslist</p>
     <p>A garden picture book of nine original Sony JPEGs by Craig, made on his property with a Sony digital camera. The photographs are unaltered originals. The Wanted plates are a collector shortlist that sits next to this garden, not a list Craig wrote. Their photographs are Wikimedia Commons placeholders &mdash; not Craig&rsquo;s camera.</p>
+    <p class="booklet-links">
+      <button type="button" class="print-booklet">Print booklet</button>
+      <a href="craigslist-booklet.pdf">Download the PDF booklet</a>
+    </p>
     <p class="colophon__note">This is a photo book. It is not a classifieds site.</p>
     <h2 class="essay">Sources</h2>
     <ul class="sources essay">
@@ -1065,7 +1170,7 @@
         </ul>
       </li>
     </ul>
-    <p class="essay">No species, binomial, or global rank was added beyond Craig&rsquo;s captions and the notes above. Untitled stays untitled. Wanted is not a list Craig wrote.</p>
+    <p class="essay">No species, binomial, or global rank was added beyond Craig&rsquo;s captions and the notes above. Untitled stays untitled. Wanted is not a list Craig wrote. The map is an original schematic of ranges already written on the plates; it does not invent a home for Untitled.</p>
     <p><a href="#cover">Back to the title page</a></p>
   </footer>
 

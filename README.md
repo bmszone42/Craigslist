@@ -4,7 +4,7 @@ A static garden picture book of photographs by **Craig**. This is a photo book, 
 
 The nine images are Craig’s original Sony DSC-N2 JPEGs, renamed from his captions only. Plate VIII was unlabeled, so it is filed as `untitled.jpg`.
 
-Each plate is a short botanical folio: the photograph, then a species card and a few sentences. Facts stay inside Craig’s captions — no invented species, binomials, or global ranks. Untitled stays untitled. Arrow keys or a horizontal swipe turn the page. Tap a photograph for a full-bleed view of the original JPEG. Guest mode (`?guest=1`) hides the cards and keeps titles and captions. Wanted plates stay visible in guest mode as titles and placeholder photographs. A print stylesheet keeps the booklet shape.
+Each plate is a short botanical folio: the photograph, then a species card and a few sentences. Facts stay inside Craig’s captions — no invented species, binomials, or global ranks. Untitled stays untitled. Arrow keys or a horizontal swipe turn the page. Tap a photograph for a full-bleed view of the original JPEG. Guest mode (`?guest=1`) hides the cards and keeps titles and captions. Wanted plates stay visible in guest mode as titles and placeholder photographs. `#map` is a one-page schematic of native ranges for the photographed plants — Untitled has no pin; Wanted is not on the map. Print booklet (`window.print()`) or download `craigslist-booklet.pdf`.
 
 Plate hashes: `#rare-blue-cycad` `#encephalartos` `#zombie-palm` `#red-sealing-wax-palm` `#blue-bamboo` `#beehive-ginger` `#montgomery-palms` `#untitled` `#chamberonia-palm`.
 

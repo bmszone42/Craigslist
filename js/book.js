@@ -12,6 +12,7 @@
     "montgomery-palms",
     "untitled",
     "chamberonia-palm",
+    "map",
     "wanted",
     "wanted-encephalartos-ferox",
     "wanted-encephalartos-horridus",
@@ -153,6 +154,12 @@
     });
   }
 
+  document.querySelectorAll(".print-booklet").forEach(function (button) {
+    button.addEventListener("click", function () {
+      window.print();
+    });
+  });
+
   function openLightbox(img) {
     if (!lightbox || !lightboxImg || !img) return;
     lightboxImg.src = img.currentSrc || img.src;
@@ -213,7 +220,7 @@
     function (event) {
       if (lightbox && !lightbox.hidden) return;
       if (!event.touches || event.touches.length !== 1) return;
-      if (!event.target.closest(".plate, .wanted-open")) return;
+      if (!event.target.closest(".plate, .wanted-open, .map-page")) return;
       touchStartX = event.touches[0].clientX;
       touchStartY = event.touches[0].clientY;
     },
@@ -225,7 +232,7 @@
     function (event) {
       if (lightbox && !lightbox.hidden) return;
       if (!event.changedTouches || event.changedTouches.length !== 1) return;
-      if (!event.target.closest(".plate, .wanted-open")) return;
+      if (!event.target.closest(".plate, .wanted-open, .map-page")) return;
       const dx = event.changedTouches[0].clientX - touchStartX;
       const dy = event.changedTouches[0].clientY - touchStartY;
       if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
