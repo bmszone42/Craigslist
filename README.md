@@ -1,6 +1,6 @@
 # Craigslist
 
-A static garden picture book of photographs by **Craig Goldstone**. This is a photo book, not classifieds.
+A static garden picture book of photographs by **Craig**. This is a photo book, not classifieds.
 
 The nine images are Craig’s original Sony DSC-N2 JPEGs, renamed from his captions only. Plate VIII was unlabeled, so it is filed as `untitled.jpg`.
 
@@ -32,4 +32,4 @@ Do not deploy this site. GitHub is the source of truth.
 | `photos/untitled.jpg` | Untitled |
 | `photos/chamberonia-palm-emerging-red-frond.jpg` | Chamberonia Palm (Chambeyronia macrocarpa) emerging red frond |
 
-Photographs by Craig Goldstone. Sony digital camera, his property.
+Photographs by Craig. Sony digital camera, his property.
