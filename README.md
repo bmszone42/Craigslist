@@ -4,6 +4,8 @@ A static garden picture book of photographs by **Craig Goldstone**. This is a ph
 
 The nine images are Craig’s original Sony DSC-N2 JPEGs, renamed from his captions only. Plate VIII was unlabeled, so it is filed as `untitled.jpg`.
 
+Each plate is a short botanical folio: the photograph, then a species card and a few sentences. Facts stay inside Craig’s captions — no invented species, binomials, or global ranks. Untitled stays untitled. Arrow keys turn the page; a print stylesheet keeps the booklet shape.
+
 ## Open locally
 
 Open `index.html` in a browser, or from this folder:
