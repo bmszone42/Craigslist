@@ -12,6 +12,16 @@
     "montgomery-palms",
     "untitled",
     "chamberonia-palm",
+    "wanted",
+    "wanted-encephalartos-ferox",
+    "wanted-encephalartos-horridus",
+    "wanted-dioon-spinulosum",
+    "wanted-microcycas-calocoma",
+    "wanted-chambeyronia-lepidota",
+    "wanted-areca-vestiaria",
+    "wanted-copernicia-macroglossa",
+    "wanted-latania-loddigesii",
+    "wanted-licuala-grandis",
     "colophon",
   ];
 
@@ -25,6 +35,15 @@
     "plate-7": "montgomery-palms",
     "plate-8": "untitled",
     "plate-9": "chamberonia-palm",
+    "wanted-1": "wanted-encephalartos-ferox",
+    "wanted-2": "wanted-encephalartos-horridus",
+    "wanted-3": "wanted-dioon-spinulosum",
+    "wanted-4": "wanted-microcycas-calocoma",
+    "wanted-5": "wanted-chambeyronia-lepidota",
+    "wanted-6": "wanted-areca-vestiaria",
+    "wanted-7": "wanted-copernicia-macroglossa",
+    "wanted-8": "wanted-latania-loddigesii",
+    "wanted-9": "wanted-licuala-grandis",
   };
 
   const guestKey = "craigslist-guest";
@@ -194,7 +213,7 @@
     function (event) {
       if (lightbox && !lightbox.hidden) return;
       if (!event.touches || event.touches.length !== 1) return;
-      if (!event.target.closest(".plate")) return;
+      if (!event.target.closest(".plate, .wanted-open")) return;
       touchStartX = event.touches[0].clientX;
       touchStartY = event.touches[0].clientY;
     },
@@ -206,7 +225,7 @@
     function (event) {
       if (lightbox && !lightbox.hidden) return;
       if (!event.changedTouches || event.changedTouches.length !== 1) return;
-      if (!event.target.closest(".plate")) return;
+      if (!event.target.closest(".plate, .wanted-open")) return;
       const dx = event.changedTouches[0].clientX - touchStartX;
       const dy = event.changedTouches[0].clientY - touchStartY;
       if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
