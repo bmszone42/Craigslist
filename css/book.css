@@ -488,6 +488,30 @@ dd {
   margin-bottom: 0;
 }
 
+.received-note {
+  margin: 1.4rem 0 0;
+  padding: 0.85rem 0 0.85rem 1.15rem;
+  border-left: 2px solid var(--gold);
+}
+
+.received-note p {
+  margin: 0;
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.received-note cite {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--display);
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;

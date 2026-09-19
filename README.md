@@ -2,11 +2,11 @@
 
 A static garden picture book of photographs by **Craig**. This is a photo book, not classifieds.
 
-Plates I–IX are Craig’s original Sony DSC-N2 JPEGs, renamed from his captions only. Plate VIII was unlabeled, so it is filed as `untitled.jpg`. Plates X–XV are the *Brownea grandiceps* series he captioned: a Venezuelan tree whose new leaves start as a pod.
+Plates I–IX are Craig’s original Sony DSC-N2 JPEGs, renamed from his captions only. Plate VIII was unlabeled, so it is filed as `untitled.jpg`. Plates X–XV are the *Brownea grandiceps* series he captioned: a Venezuelan tree whose new leaves start as a pod. Plate XVI is a *Pigafetta* named in a received note; this book does not choose between *elata* and *filaris*.
 
-Each plate is a short botanical folio: the photograph, then a species card and a few sentences. Facts stay inside Craig’s captions — no invented species, binomials, or global ranks. Untitled stays untitled. Arrow keys or a horizontal swipe turn the page. Tap a photograph for a full-bleed view of the original JPEG. Guest mode (`?guest=1`) hides the cards and keeps titles and captions. Wanted plates stay visible in guest mode as titles and placeholder photographs. `#map` is a one-page schematic of native ranges for the photographed plants — Untitled has no pin; the Brownea series shares one Venezuelan pin; Wanted is not on the map. Print booklet (`window.print()`) or download `craigslist-booklet.pdf`.
+Each plate is a short botanical folio: the photograph, then a species card and a few sentences. Facts stay inside Craig’s captions — no invented species, binomials, or global ranks. Untitled stays untitled. Arrow keys or a horizontal swipe turn the page. Tap a photograph for a full-bleed view of the original JPEG. Guest mode (`?guest=1`) hides the cards and keeps titles and captions. Wanted plates stay visible in guest mode as titles and placeholder photographs. `#map` is a one-page schematic of native ranges for the photographed plants — Untitled has no pin; the Brownea series shares one Venezuelan pin; plate XVI is the *Pigafetta* genus range in Wallacea; Wanted is not on the map. Print booklet (`window.print()`) or download `craigslist-booklet.pdf`.
 
-Plate hashes: `#rare-blue-cycad` `#encephalartos` `#zombie-palm` `#red-sealing-wax-palm` `#blue-bamboo` `#beehive-ginger` `#montgomery-palms` `#untitled` `#chamberonia-palm` `#brownea-pod` `#brownea-opening` `#brownea-pale-flush` `#brownea-leaflets` `#brownea-greening` `#brownea-mature`.
+Plate hashes: `#rare-blue-cycad` `#encephalartos` `#zombie-palm` `#red-sealing-wax-palm` `#blue-bamboo` `#beehive-ginger` `#montgomery-palms` `#untitled` `#chamberonia-palm` `#brownea-pod` `#brownea-opening` `#brownea-pale-flush` `#brownea-leaflets` `#brownea-greening` `#brownea-mature` `#pigafetta`.
 
 Wanted (`#wanted`) is a collector shortlist that sits next to this garden — not a list Craig wrote. Each Wanted plate uses a Wikimedia Commons photograph filed in `photos/wanted/` and captioned “Placeholder photograph — not Craig’s camera.” Photographer, license, and Commons URL sit on the plate. Per-plate hashes: `#wanted-encephalartos-ferox` `#wanted-encephalartos-horridus` `#wanted-dioon-spinulosum` `#wanted-microcycas-calocoma` `#wanted-chambeyronia-lepidota` `#wanted-areca-vestiaria` `#wanted-copernicia-macroglossa` `#wanted-latania-loddigesii` `#wanted-licuala-grandis`.
 
@@ -41,5 +41,6 @@ Do not deploy this site. GitHub is the source of truth.
 | `photos/brownea-grandiceps-pale-leaflets.jpg` | Brownea Grandiceps — pale leaflets |
 | `photos/brownea-grandiceps-greening.jpg` | Brownea Grandiceps — greening |
 | `photos/brownea-grandiceps-mature-leaf.jpg` | Brownea Grandiceps — mature leaf |
+| `photos/pigafetta.jpg` | Pigafetta — possibly elata or filaris; this book does not choose |
 
 Photographs by Craig. Sony digital camera, his property.
