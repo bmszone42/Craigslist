@@ -47,6 +47,7 @@
     <p class="booklet-links">
       <button type="button" class="print-booklet">Print booklet</button>
       <a href="craigslist-booklet.pdf">Download PDF</a>
+      <a href="#map">Open the atlas</a>
     </p>
     <a class="turn" href="#verso">Turn the page</a>
   </header>
@@ -59,14 +60,14 @@
     <nav class="pager">
       <a href="#cover">Title</a>
       <a href="#contents">Contents</a>
-      <a href="#map">Map</a>
+      <a href="#map">Atlas</a>
     </nav>
   </section>
 
   <nav class="contents-page" id="contents" aria-label="List of plates">
     <p class="eyebrow">Contents</p>
     <h2>Sixteen plates</h2>
-    <p class="contents-map-link"><a href="#map">A one-page map of the plants he photographed</a> &middot; Untitled has no pin</p>
+    <p class="contents-map-link"><a href="#map">Open the garden atlas</a> &mdash; nine native homes; hover a pin for the slip &middot; Untitled has no pin</p>
     <ol class="thumbs">
       <li>
         <a href="#rare-blue-cycad">
@@ -255,7 +256,250 @@
         </li>
       </ol>
     </section>
+    <p class="pager">
+      <a href="#verso">Verso</a>
+      <a href="#map">Atlas</a>
+      <a href="#rare-blue-cycad">Plate I</a>
+    </p>
   </nav>
+
+  <section class="map-page" id="map" aria-label="Map of photographed plants">
+    <header class="map-page__intro">
+      <p class="eyebrow">A garden atlas</p>
+      <h2>Where they come from</h2>
+      <p class="lede">Native ranges of the plants in these photographs &mdash; not pins on Craig&rsquo;s property, and not a fake GPS. Hover a gold pin, or a picture in the strip, to draw a specimen slip. Click through to that plate. Untitled has no caption, so it has no pin. The Wanted shortlist is not on this map.</p>
+      <p class="map-tally">Nine pins &middot; fifteen photographs on the map &middot; Untitled stays off it</p>
+    </header>
+
+    <div class="atlas">
+      <div class="atlas-stage">
+        <figure class="world-map atlas-frame">
+          <svg viewBox="0 0 1000 520" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">World map of native ranges for the photographed plants</title>
+            <desc id="map-desc">Letterpress world atlas. Pins mark Africa for the Encephalartos plates, Hispaniola, Venezuela for the Brownea series, southern China, the Malay peat-swamp cluster, Wallacea for Pigafetta, Vanuatu, and New Caledonia. Untitled is omitted. Hover a pin for a specimen slip; open the pin to turn to that plate.</desc>
+            <defs>
+              <radialGradient id="ocean-glow" cx="50%" cy="42%" r="68%">
+                <stop offset="0%" stop-color="#e4dccb"/>
+                <stop offset="100%" stop-color="#cfc4b0"/>
+              </radialGradient>
+            </defs>
+            <rect class="map-ocean" width="1000" height="520" fill="url(#ocean-glow)"/>
+            <g class="map-graticule" aria-hidden="true">
+              <path d="M0 104 H1000 M0 208 H1000 M0 312 H1000 M0 416 H1000"/>
+              <path d="M125 0 V520 M250 0 V520 M375 0 V520 M500 0 V520 M625 0 V520 M750 0 V520 M875 0 V520"/>
+            </g>
+            <g class="map-land">
+              <path d="M86 96 C128 58 198 46 258 64 C304 76 338 96 330 132 C318 164 286 174 258 184 C248 204 256 228 246 238 C228 254 214 242 206 222 C184 214 152 188 128 168 C96 148 70 128 64 110 C68 98 76 96 86 96 Z"/>
+              <path d="M316 44 C348 32 380 44 384 66 C370 88 340 90 318 78 C306 64 306 50 316 44 Z"/>
+              <path d="M228 250 C260 242 286 260 296 296 C308 344 290 396 262 426 C238 416 224 374 218 332 C212 294 214 260 228 250 Z"/>
+              <path d="M230 190 L262 184 268 198 236 204 Z"/>
+              <path d="M248 198 L272 194 278 210 252 214 Z"/>
+              <path d="M476 156 C520 144 572 160 586 198 C602 250 590 312 562 358 C530 398 498 384 488 342 C476 294 466 226 476 156 Z"/>
+              <path d="M598 310 L618 304 624 342 602 348 Z"/>
+              <path d="M476 96 C528 70 610 64 690 56 C770 48 850 62 900 96 C940 118 958 150 918 174 C872 162 800 176 746 188 C706 204 684 236 706 258 C728 278 772 270 798 248 C828 232 862 244 854 266 C832 286 784 280 760 258 C732 236 696 206 662 192 C612 176 548 164 512 144 C490 130 476 114 476 96 Z"/>
+              <path d="M466 86 L482 82 486 98 470 102 Z"/>
+              <path d="M886 146 L902 140 908 162 890 168 Z"/>
+              <path d="M786 254 C820 244 854 256 868 276 C842 290 808 284 788 268 Z"/>
+              <path d="M848 250 C890 240 928 256 936 278 C902 292 862 284 848 266 Z"/>
+              <path d="M816 316 C880 300 942 322 954 358 C930 392 862 400 826 374 C804 352 800 328 816 316 Z"/>
+              <path d="M936 304 L948 302 952 314 938 316 Z"/>
+              <path d="M956 320 L970 318 974 330 958 332 Z"/>
+              <path d="M968 380 L982 376 986 394 972 398 Z"/>
+            </g>
+            <g class="map-washes" aria-hidden="true">
+              <ellipse class="map-wash" data-place="rare-blue-cycad" cx="528" cy="258" rx="64" ry="86"/>
+              <ellipse class="map-wash" data-place="zombie-palm" cx="260" cy="204" rx="28" ry="22"/>
+              <ellipse class="map-wash" data-place="brownea-pod" cx="268" cy="272" rx="32" ry="28"/>
+              <ellipse class="map-wash" data-place="blue-bamboo" cx="822" cy="168" rx="36" ry="26"/>
+              <ellipse class="map-wash" data-place="red-sealing-wax-palm" cx="812" cy="258" rx="52" ry="30"/>
+              <ellipse class="map-wash" data-place="beehive-ginger" cx="812" cy="258" rx="52" ry="30"/>
+              <ellipse class="map-wash" data-place="pigafetta" cx="872" cy="262" rx="40" ry="24"/>
+              <ellipse class="map-wash" data-place="montgomery-palms" cx="944" cy="308" rx="22" ry="16"/>
+              <ellipse class="map-wash" data-place="chamberonia-palm" cx="962" cy="326" rx="20" ry="14"/>
+            </g>
+            <g class="map-pins">
+              <a class="map-pin-link" href="#rare-blue-cycad" data-place="rare-blue-cycad" aria-label="Plates I to II, Rare Blue Cycad, Africa. Open the plate.">
+                <g transform="translate(528 258)">
+                  <g class="pin pin--wide">
+                    <circle class="pin__hit" r="20"/>
+                    <circle class="pin__halo" r="18"/>
+                    <rect class="pin__body" x="-17" y="-10" width="34" height="20" rx="10"/>
+                    <text y="4">I–II</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#zombie-palm" data-place="zombie-palm" aria-label="Plate III, Zombie Palm, Hispaniola. Open the plate.">
+                <g transform="translate(260 204)">
+                  <g class="pin">
+                    <circle class="pin__hit" r="18"/>
+                    <circle class="pin__halo" r="16"/>
+                    <circle class="pin__body" r="11"/>
+                    <text y="4">III</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#brownea-pod" data-place="brownea-pod" aria-label="Plates X to XV, Brownea grandiceps, Venezuela. Open the first plate.">
+                <g transform="translate(268 272)">
+                  <g class="pin pin--wide">
+                    <circle class="pin__hit" r="20"/>
+                    <circle class="pin__halo" r="18"/>
+                    <rect class="pin__body" x="-18" y="-10" width="36" height="20" rx="10"/>
+                    <text y="4">X–XV</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#red-sealing-wax-palm" data-place="red-sealing-wax-palm" aria-label="Plate IV, Red Sealing Wax Palm, Malay peat swamp. Open the plate.">
+                <g transform="translate(824 258)">
+                  <g class="pin">
+                    <circle class="pin__hit" r="18"/>
+                    <circle class="pin__halo" r="16"/>
+                    <circle class="pin__body" r="11"/>
+                    <text y="4">IV</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#beehive-ginger" data-place="beehive-ginger" aria-label="Plate VI, Beehive Ginger, Malay peat swamp. Open the plate.">
+                <g transform="translate(798 246)">
+                  <g class="pin">
+                    <circle class="pin__hit" r="18"/>
+                    <circle class="pin__halo" r="16"/>
+                    <circle class="pin__body" r="11"/>
+                    <text y="4">VI</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#blue-bamboo" data-place="blue-bamboo" aria-label="Plate V, Blue Bamboo, southern China. Open the plate.">
+                <g transform="translate(822 168)">
+                  <g class="pin">
+                    <circle class="pin__hit" r="18"/>
+                    <circle class="pin__halo" r="16"/>
+                    <circle class="pin__body" r="11"/>
+                    <text y="4">V</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#montgomery-palms" data-place="montgomery-palms" aria-label="Plate VII, Montgomery Palms, Vanuatu. Open the plate.">
+                <g transform="translate(944 308)">
+                  <g class="pin">
+                    <circle class="pin__hit" r="18"/>
+                    <circle class="pin__halo" r="16"/>
+                    <circle class="pin__body" r="11"/>
+                    <text y="4">VII</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#chamberonia-palm" data-place="chamberonia-palm" aria-label="Plate IX, Chamberonia Palm, New Caledonia. Open the plate.">
+                <g transform="translate(962 326)">
+                  <g class="pin">
+                    <circle class="pin__hit" r="18"/>
+                    <circle class="pin__halo" r="16"/>
+                    <circle class="pin__body" r="11"/>
+                    <text y="4">IX</text>
+                  </g>
+                </g>
+              </a>
+              <a class="map-pin-link" href="#pigafetta" data-place="pigafetta" aria-label="Plate XVI, Pigafetta, Wallacea. Open the plate.">
+                <g transform="translate(872 262)">
+                  <g class="pin">
+                    <circle class="pin__hit" r="18"/>
+                    <circle class="pin__halo" r="16"/>
+                    <circle class="pin__body" r="11"/>
+                    <text y="4">XVI</text>
+                  </g>
+                </g>
+              </a>
+            </g>
+            <g class="map-compass" aria-hidden="true" transform="translate(48 458)">
+              <circle r="16" class="map-compass__ring"/>
+              <path class="map-compass__n" d="M0 -11 L3 2 H-3 Z"/>
+              <text y="28">N</text>
+            </g>
+            <text class="map-plate-mark" x="500" y="502">Craigslist · garden atlas · native range, not the garden</text>
+          </svg>
+          <figcaption>A schematic atlas, not a survey. Africa is the <em>Encephalartos</em> genus range. The Malay pins sit together because plate IV and plate VI already share that coast. Plate VII is split: weavers bamboo with China, Montgomery palms on Vanuatu. Plates X&ndash;XV share Venezuela. Plate XVI is the <em>Pigafetta</em> genus range in Wallacea.</figcaption>
+        </figure>
+
+        <ol class="atlas-strip" aria-label="Photographs on the atlas">
+          <li>
+            <a href="#rare-blue-cycad" data-place="rare-blue-cycad">
+              <img src="photos/rare-blue-cycad.jpg" alt="" width="3648" height="2736" loading="lazy">
+              <span>I–II</span>
+            </a>
+          </li>
+          <li>
+            <a href="#zombie-palm" data-place="zombie-palm">
+              <img src="photos/zombie-palm-trunk.jpg" alt="" width="3648" height="2736" loading="lazy">
+              <span>III</span>
+            </a>
+          </li>
+          <li>
+            <a href="#red-sealing-wax-palm" data-place="red-sealing-wax-palm">
+              <img src="photos/red-sealing-wax-palm.jpg" alt="" width="3648" height="2736" loading="lazy">
+              <span>IV</span>
+            </a>
+          </li>
+          <li>
+            <a href="#blue-bamboo" data-place="blue-bamboo">
+              <img src="photos/blue-bamboo.jpg" alt="" width="3648" height="2736" loading="lazy">
+              <span>V</span>
+            </a>
+          </li>
+          <li>
+            <a href="#beehive-ginger" data-place="beehive-ginger">
+              <img src="photos/beehive-ginger.jpg" alt="" width="3648" height="2736" loading="lazy">
+              <span>VI</span>
+            </a>
+          </li>
+          <li>
+            <a href="#montgomery-palms" data-place="montgomery-palms">
+              <img src="photos/montgomery-palms-and-slender-weavers-bamboo.jpg" alt="" width="3648" height="2736" loading="lazy">
+              <span>VII</span>
+            </a>
+          </li>
+          <li>
+            <a href="#chamberonia-palm" data-place="chamberonia-palm">
+              <img src="photos/chamberonia-palm-emerging-red-frond.jpg" alt="" width="3648" height="2736" loading="lazy">
+              <span>IX</span>
+            </a>
+          </li>
+          <li>
+            <a href="#brownea-pod" data-place="brownea-pod">
+              <img src="photos/brownea-grandiceps-pod.jpg" alt="" width="2000" height="1500" loading="lazy">
+              <span>X–XV</span>
+            </a>
+          </li>
+          <li>
+            <a href="#pigafetta" data-place="pigafetta">
+              <img src="photos/pigafetta.jpg" alt="" width="3000" height="2250" loading="lazy">
+              <span>XVI</span>
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <aside class="atlas-slip" id="atlas-slip" aria-live="polite">
+        <p class="atlas-slip__eyebrow">Specimen slip</p>
+        <h3>Hover a pin</h3>
+        <p class="atlas-slip__empty">Nine native homes. Draw a slip from a gold pin or a picture in the strip, then open that plate. Untitled is not on this atlas.</p>
+      </aside>
+    </div>
+
+    <ol class="map-legend">
+      <li><a href="#rare-blue-cycad" data-place="rare-blue-cycad"><span>I–II</span> Africa</a> &mdash; Rare Blue Cycad and <em>Encephalartos</em> sp., genus range</li>
+      <li><a href="#zombie-palm" data-place="zombie-palm"><span>III</span> Hispaniola</a> &mdash; Zombie Palm, <em>Zombia antillarum</em></li>
+      <li><a href="#red-sealing-wax-palm" data-place="red-sealing-wax-palm"><span>IV</span> Malay peat swamp</a> &mdash; Red Sealing Wax Palm, <em>Cyrtostachys renda</em></li>
+      <li><a href="#blue-bamboo" data-place="blue-bamboo"><span>V</span> China</a> &mdash; Blue Bamboo, and the weavers bamboo on plate VII</li>
+      <li><a href="#beehive-ginger" data-place="beehive-ginger"><span>VI</span> Malay peat swamp</a> &mdash; Beehive Ginger, <em>Zingiber spectabile</em></li>
+      <li><a href="#montgomery-palms" data-place="montgomery-palms"><span>VII</span> Vanuatu</a> &mdash; Montgomery palms, <em>Veitchia arecina</em></li>
+      <li><a href="#chamberonia-palm" data-place="chamberonia-palm"><span>IX</span> New Caledonia</a> &mdash; Craig&rsquo;s Chamberonia, <em>Chambeyronia macrocarpa</em></li>
+      <li><a href="#brownea-pod" data-place="brownea-pod"><span>X–XV</span> Venezuela</a> &mdash; <em>Brownea grandiceps</em>, the tree whose new leaves start as a pod</li>
+      <li><a href="#pigafetta" data-place="pigafetta"><span>XVI</span> Wallacea</a> &mdash; <em>Pigafetta</em>, genus range; this book does not choose <em>elata</em> or <em>filaris</em></li>
+    </ol>
+    <nav class="pager">
+      <a href="#contents">Contents</a>
+      <a href="#rare-blue-cycad">Plate I</a>
+    </nav>
+  </section>
 
   <main id="plates">
     <article class="plate" id="rare-blue-cycad">
@@ -294,6 +538,7 @@
           <p>That wax reads stronger in dry air and often washes greener in humid South Florida. The genus name is Greek <em>enkephalos</em> + <em>artos</em>, &ldquo;bread in the head,&rdquo; for pith once baked as bread; the whole genus is CITES Appendix&nbsp;I. This is a garden specimen, not a wild identification.</p>
         </div>
         <nav class="pager">
+          <a href="#map">Atlas</a>
           <a href="#contents">Contents</a>
           <a href="#encephalartos">Plate II</a>
         </nav>
@@ -970,119 +1215,11 @@
         </div>
         <nav class="pager">
           <a href="#brownea-mature">Plate XV</a>
-          <a href="#contents">Contents</a>
-          <a href="#map">Map</a>
+          <a href="#map">Atlas</a>
+          <a href="#wanted">Wanted</a>
         </nav>
       </div>
     </article>
-
-    <section class="map-page" id="map" aria-label="Map of photographed plants">
-      <p class="eyebrow">A garden atlas</p>
-      <h2>Where they come from</h2>
-      <p class="lede">Native ranges of the plants in these photographs &mdash; not pins on Craig&rsquo;s property, and not a fake GPS. Untitled has no caption, so it has no pin. The Brownea series shares one Venezuelan pin. Plate XVI is the genus range, not a chosen species. The Wanted shortlist is not on this map.</p>
-      <figure class="world-map">
-        <svg viewBox="0 0 1000 480" role="img" aria-labelledby="map-title map-desc">
-          <title id="map-title">World map of native ranges for the photographed plants</title>
-          <desc id="map-desc">Schematic letterpress world map. Pins mark Africa for the Encephalartos plates, Hispaniola, Venezuela for the Brownea series, the Malay peat-swamp cluster, southern China, Wallacea for Pigafetta, Vanuatu, and New Caledonia. Untitled is omitted.</desc>
-          <rect class="map-ocean" width="1000" height="480"/>
-          <g class="map-graticule" aria-hidden="true">
-            <path d="M0 120 H1000 M0 240 H1000 M0 360 H1000"/>
-            <path d="M167 0 V480 M333 0 V480 M500 0 V480 M667 0 V480 M833 0 V480"/>
-          </g>
-          <g class="map-land">
-            <path d="M78 78 C145 52 230 58 268 88 C292 112 286 152 256 178 C228 208 196 228 172 246 C148 232 124 196 104 162 C86 128 68 100 78 78 Z"/>
-            <path d="M172 246 C198 258 214 278 202 298 L176 292 C168 268 162 250 172 246 Z"/>
-            <path d="M228 300 C262 292 284 322 290 362 C296 412 274 448 248 462 C226 450 208 410 204 368 C200 328 210 308 228 300 Z"/>
-            <path d="M318 48 C352 40 378 48 384 68 C372 88 348 94 324 86 C310 72 306 56 318 48 Z"/>
-            <path d="M248 196 L266 193 270 204 252 207 Z"/>
-            <path d="M478 92 C522 80 556 96 560 122 C546 144 514 150 490 138 C474 122 468 102 478 92 Z"/>
-            <path d="M488 158 C542 150 586 178 596 228 C608 292 584 354 548 392 C512 414 478 380 474 328 C468 268 474 198 488 158 Z"/>
-            <path d="M598 348 L616 342 620 378 600 384 Z"/>
-            <path d="M558 72 C652 48 790 58 868 92 C912 114 932 154 888 176 C844 164 778 180 716 188 C656 178 598 162 568 140 C552 118 542 90 558 72 Z"/>
-            <path d="M716 188 C740 204 752 234 736 256 L708 232 C702 208 708 192 716 188 Z"/>
-            <path d="M778 198 C816 192 848 208 858 230 C836 248 802 244 784 220 Z"/>
-            <path d="M818 318 C882 306 934 328 944 360 C922 394 858 404 826 382 C804 360 800 334 818 318 Z"/>
-            <path d="M930 300 L942 298 946 308 934 310 Z"/>
-            <path d="M952 312 L962 310 966 318 954 320 Z"/>
-          </g>
-          <g class="map-wash" aria-hidden="true">
-            <ellipse cx="532" cy="268" rx="62" ry="88"/>
-          </g>
-          <g class="map-pins">
-            <a href="#rare-blue-cycad">
-              <g class="pin" transform="translate(532 268)">
-                <circle r="9"/>
-                <text y="4">I–II</text>
-              </g>
-            </a>
-            <a href="#zombie-palm">
-              <g class="pin" transform="translate(258 200)">
-                <circle r="9"/>
-                <text y="4">III</text>
-              </g>
-            </a>
-            <a href="#brownea-pod">
-              <g class="pin" transform="translate(268 286)">
-                <circle r="9"/>
-                <text y="4">X</text>
-              </g>
-            </a>
-            <a href="#red-sealing-wax-palm">
-              <g class="pin" transform="translate(818 228)">
-                <circle r="9"/>
-                <text y="4">IV</text>
-              </g>
-            </a>
-            <a href="#beehive-ginger">
-              <g class="pin pin--offset" transform="translate(798 248)">
-                <circle r="8"/>
-                <text y="3">VI</text>
-              </g>
-            </a>
-            <a href="#blue-bamboo">
-              <g class="pin" transform="translate(828 168)">
-                <circle r="9"/>
-                <text y="4">V</text>
-              </g>
-            </a>
-            <a href="#montgomery-palms">
-              <g class="pin" transform="translate(936 304)">
-                <circle r="9"/>
-                <text y="4">VII</text>
-              </g>
-            </a>
-            <a href="#chamberonia-palm">
-              <g class="pin" transform="translate(958 322)">
-                <circle r="9"/>
-                <text y="4">IX</text>
-              </g>
-            </a>
-            <a href="#pigafetta">
-              <g class="pin" transform="translate(858 238)">
-                <circle r="9"/>
-                <text y="4">XVI</text>
-              </g>
-            </a>
-          </g>
-        </svg>
-        <figcaption>A schematic atlas, not a survey. Africa is the <em>Encephalartos</em> genus range. The Malay pins sit together because plate IV and plate VI already share that coast. Plate VII is split: weavers bamboo with China, Montgomery palms on Vanuatu. Plates X&ndash;XV share Venezuela. Plate XVI is the <em>Pigafetta</em> genus range in Wallacea.</figcaption>
-      </figure>
-      <ol class="map-legend">
-        <li><a href="#rare-blue-cycad"><span>I–II</span> Africa</a> &mdash; Rare Blue Cycad and <em>Encephalartos</em> sp., genus range</li>
-        <li><a href="#zombie-palm"><span>III</span> Hispaniola</a> &mdash; Zombie Palm, <em>Zombia antillarum</em></li>
-        <li><a href="#red-sealing-wax-palm"><span>IV + VI</span> Malay peat swamp</a> &mdash; Red Sealing Wax Palm and Beehive Ginger (S. Thailand / Peninsular Malaysia / Sumatra / Borneo)</li>
-        <li><a href="#blue-bamboo"><span>V</span> China</a> &mdash; Blue Bamboo, and the weavers bamboo on plate VII</li>
-        <li><a href="#montgomery-palms"><span>VII</span> Vanuatu</a> &mdash; Montgomery palms, <em>Veitchia arecina</em></li>
-        <li><a href="#chamberonia-palm"><span>IX</span> New Caledonia</a> &mdash; Craig&rsquo;s Chamberonia, <em>Chambeyronia macrocarpa</em></li>
-        <li><a href="#brownea-pod"><span>X–XV</span> Venezuela</a> &mdash; <em>Brownea grandiceps</em>, the tree whose new leaves start as a pod</li>
-        <li><a href="#pigafetta"><span>XVI</span> Wallacea</a> &mdash; <em>Pigafetta</em>, genus range; this book does not choose <em>elata</em> or <em>filaris</em></li>
-      </ol>
-      <nav class="pager">
-        <a href="#pigafetta">Plate XVI</a>
-        <a href="#contents">Contents</a>
-        <a href="#wanted">Wanted</a>
-      </nav>
-    </section>
 
     <section class="wanted-open" id="wanted" aria-label="Wanted">
       <p class="eyebrow">A shortlist, not a caption</p>
@@ -1091,8 +1228,8 @@
       <p>Nine awaiting-photograph plates. Each one belongs beside a photograph already in this book. The pictures here are placeholders from Wikimedia Commons &mdash; not Craig&rsquo;s camera. The sixteen garden photographs remain the plates he made.</p>
       <p class="wanted-open__source">One place to look: South Florida Palm Society Show and Sale at Fairchild Tropical Botanic Garden, Nov 28&ndash;29, 2026.</p>
       <nav class="pager">
-        <a href="#map">Map</a>
-        <a href="#contents">Contents</a>
+        <a href="#pigafetta">Plate XVI</a>
+        <a href="#map">Atlas</a>
         <a href="#wanted-encephalartos-ferox">Wanted I</a>
       </nav>
     </section>
@@ -1534,7 +1671,7 @@
         </ul>
       </li>
     </ul>
-    <p class="essay">No species, binomial, or global rank was added beyond Craig&rsquo;s captions and the notes above. Untitled stays untitled. The Brownea series keeps his name and his Venezuela note; Kew supplies only the accepted spelling and the published range. Plate XVI quotes a received identification and stays at genus. Wanted is not a list Craig wrote. The map is an original schematic of ranges already written on the plates; it does not invent a home for Untitled.</p>
+    <p class="essay">No species, binomial, or global rank was added beyond Craig&rsquo;s captions and the notes above. Untitled stays untitled. The Brownea series keeps his name and his Venezuela note; Kew supplies only the accepted spelling and the published range. Plate XVI quotes a received identification and stays at genus. Wanted is not a list Craig wrote. The atlas is an original schematic of ranges already written on the plates; it does not invent a home for Untitled.</p>
     <p><a href="#cover">Back to the title page</a></p>
   </footer>
 

@@ -3,6 +3,7 @@
     "cover",
     "verso",
     "contents",
+    "map",
     "rare-blue-cycad",
     "encephalartos",
     "zombie-palm",
@@ -19,7 +20,6 @@
     "brownea-greening",
     "brownea-mature",
     "pigafetta",
-    "map",
     "wanted",
     "wanted-encephalartos-ferox",
     "wanted-encephalartos-horridus",
@@ -50,6 +50,7 @@
     "plate-14": "brownea-greening",
     "plate-15": "brownea-mature",
     "plate-16": "pigafetta",
+    atlas: "map",
     "wanted-1": "wanted-encephalartos-ferox",
     "wanted-2": "wanted-encephalartos-horridus",
     "wanted-3": "wanted-dioon-spinulosum",
@@ -235,6 +236,7 @@
       if (lightbox && !lightbox.hidden) return;
       if (!event.touches || event.touches.length !== 1) return;
       if (!event.target.closest(".plate, .wanted-open, .map-page")) return;
+      if (event.target.closest(".map-pin-link, .atlas-strip a, .atlas-slip, .map-legend")) return;
       touchStartX = event.touches[0].clientX;
       touchStartY = event.touches[0].clientY;
     },
@@ -247,6 +249,7 @@
       if (lightbox && !lightbox.hidden) return;
       if (!event.changedTouches || event.changedTouches.length !== 1) return;
       if (!event.target.closest(".plate, .wanted-open, .map-page")) return;
+      if (event.target.closest(".map-pin-link, .atlas-strip a, .atlas-slip, .map-legend")) return;
       const dx = event.changedTouches[0].clientX - touchStartX;
       const dy = event.changedTouches[0].clientY - touchStartY;
       if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy)) return;
@@ -257,4 +260,160 @@
 
   window.addEventListener("hashchange", syncHash);
   if (window.location.hash) syncHash();
+
+  (function initAtlas() {
+    const root = document.getElementById("map");
+    const slip = document.getElementById("atlas-slip");
+    if (!root || !slip) return;
+
+    const places = {
+      "rare-blue-cycad": {
+        plate: "Plates I–II",
+        href: "#rare-blue-cycad",
+        title: "Rare Blue Cycad",
+        latin: "No binomial given · genus almost certainly <em>Encephalartos</em>",
+        range: "Africa · Zamiaceae",
+        thumb: "photos/rare-blue-cycad.jpg",
+        note: "Craig did not name a species. The wax that reads blue is an African cycad habit.",
+        alsoHref: "#encephalartos",
+        also: "Plate II is the same genus, labeled only to <em>Encephalartos</em>.",
+      },
+      "zombie-palm": {
+        plate: "Plate III",
+        href: "#zombie-palm",
+        title: "Zombie Palm trunk",
+        latin: "<em>Zombia antillarum</em>",
+        range: "Hispaniola · Arecaceae",
+        thumb: "photos/zombie-palm-trunk.jpg",
+        note: "A genus of one. The armored trunk is persistent, spiny leaf sheaths on a clustered fan palm.",
+      },
+      "red-sealing-wax-palm": {
+        plate: "Plate IV",
+        href: "#red-sealing-wax-palm",
+        title: "Red Sealing Wax Palm",
+        latin: "<em>Cyrtostachys renda</em> Blume",
+        range: "Malay peat swamp · Arecaceae",
+        thumb: "photos/red-sealing-wax-palm.jpg",
+        note: "The scarlet crownshaft, west of Wallace’s Line. It shares this coast with the ginger on plate VI.",
+      },
+      "blue-bamboo": {
+        plate: "Plate V",
+        href: "#blue-bamboo",
+        title: "Blue Bamboo",
+        latin: "<em>Bambusa chungii</em> McClure",
+        range: "Southern China · Vietnam · Poaceae",
+        thumb: "photos/blue-bamboo.jpg",
+        note: "A clumping bamboo whose young culms wear a white wax that reads blue. The weavers on plate VII belong with this coast.",
+      },
+      "beehive-ginger": {
+        plate: "Plate VI",
+        href: "#beehive-ginger",
+        title: "Beehive Ginger",
+        latin: "<em>Zingiber spectabile</em> Griff.",
+        range: "Thailand to Peninsular Malaysia · Zingiberaceae",
+        thumb: "photos/beehive-ginger.jpg",
+        note: "The inflorescence is a stack of incurved bracts. Native range sits with the sealing-wax palm on this coast.",
+      },
+      "montgomery-palms": {
+        plate: "Plate VII",
+        href: "#montgomery-palms",
+        title: "Montgomery Palms",
+        latin: "<em>Veitchia arecina</em> Becc.",
+        range: "Vanuatu · Arecaceae",
+        thumb: "photos/montgomery-palms-and-slender-weavers-bamboo.jpg",
+        note: "The pair on the left of that photograph. The weavers bamboo on the right belongs with the China pin.",
+      },
+      "chamberonia-palm": {
+        plate: "Plate IX",
+        href: "#chamberonia-palm",
+        title: "Chamberonia Palm",
+        latin: "Craig’s spelling. Accepted name: <em>Chambeyronia macrocarpa</em>",
+        range: "New Caledonia · Arecaceae",
+        thumb: "photos/chamberonia-palm-emerging-red-frond.jpg",
+        note: "What this plate shows is the new frond: it emerges red or burgundy, then greens.",
+      },
+      "brownea-pod": {
+        plate: "Plates X–XV",
+        href: "#brownea-pod",
+        title: "Brownea grandiceps",
+        latin: "Craig wrote <em>Brownea Grandiceps</em> — Venezuela",
+        range: "Venezuela · Fabaceae",
+        thumb: "photos/brownea-grandiceps-pod.jpg",
+        note: "Six photographs of one tree. The new leaves start out as a pod.",
+        alsoHref: "#brownea-mature",
+        also: "The series ends on the mature leaf, plate XV.",
+      },
+      pigafetta: {
+        plate: "Plate XVI",
+        href: "#pigafetta",
+        title: "Pigafetta",
+        latin: "Possibly <em>elata</em> or <em>filaris</em>. This book does not choose.",
+        range: "Wallacea · Arecaceae",
+        thumb: "photos/pigafetta.jpg",
+        note: "A received note named the genus. The green trunk is the tell; this plant is still too young to show it.",
+      },
+    };
+
+    let activeId = "";
+
+    function coarsePointer() {
+      return window.matchMedia("(hover: none), (pointer: coarse)").matches;
+    }
+
+    function show(id) {
+      const place = places[id];
+      if (!place) return;
+      activeId = id;
+      root.querySelectorAll("[data-place]").forEach(function (el) {
+        el.classList.toggle("is-active", el.getAttribute("data-place") === id);
+      });
+      const also = place.also
+        ? '<p class="atlas-slip__also">' +
+          (place.alsoHref
+            ? '<a href="' + place.alsoHref + '">' + place.also + "</a>"
+            : place.also) +
+          "</p>"
+        : "";
+      slip.innerHTML =
+        '<p class="atlas-slip__eyebrow">' +
+        place.plate +
+        "</p>" +
+        '<img class="atlas-slip__thumb" src="' +
+        place.thumb +
+        '" alt="">' +
+        "<h3>" +
+        place.title +
+        "</h3>" +
+        '<p class="latin">' +
+        place.latin +
+        "</p>" +
+        '<p class="atlas-slip__range">' +
+        place.range +
+        "</p>" +
+        '<p class="atlas-slip__note essay">' +
+        place.note +
+        "</p>" +
+        also +
+        '<a class="atlas-slip__open" href="' +
+        place.href +
+        '">Open the plate</a>';
+    }
+
+    root.querySelectorAll("[data-place]").forEach(function (el) {
+      const id = el.getAttribute("data-place");
+      el.addEventListener("mouseenter", function () {
+        show(id);
+      });
+      el.addEventListener("focus", function () {
+        show(id);
+      });
+      el.addEventListener("click", function (event) {
+        if (!coarsePointer()) return;
+        if (activeId !== id) {
+          event.preventDefault();
+          show(id);
+        }
+      });
+    });
+  })();
 })();
