@@ -1,6 +1,6 @@
 # Wanted placeholder photographs
 
-These files are downloaded from Wikimedia Commons. They are **not** Craig’s camera. The nine Sony JPEGs in `photos/` remain the only garden photographs he made.
+These files are downloaded from Wikimedia Commons. They are **not** Craig’s camera. The fifteen garden photographs in `photos/` remain the plates he made.
 
 | File | Taxon | Photographer | License | Commons page |
 | --- | --- | --- | --- | --- |
